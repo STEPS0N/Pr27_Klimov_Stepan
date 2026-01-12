@@ -9,11 +9,11 @@ namespace Cinema_Klimov.Models
 {
     public class Poster
     {
-        //[Key]
-        //public int Id { get; set; }
-        //public string Film { get; set; }
-        //public DateTime Time { get; set; }
-        //public int Price { get; set; }
-        //public int IdCinema { get; set; }
+        [Key]
+        public int Id { get; set; }
+        public string Film { get; set; }
+        public DateTime Time { get; set; }
+        public int Price { get; set; }
+        public int IdCinema { get; set; }
     }
 }
