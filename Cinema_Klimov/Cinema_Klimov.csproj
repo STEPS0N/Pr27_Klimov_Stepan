@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Images\logo.png" />
+    <None Remove="Images\post.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,7 +27,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\post.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
