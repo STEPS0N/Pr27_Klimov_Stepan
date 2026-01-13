@@ -8,13 +8,14 @@ namespace Cinema_Klimov
     /// </summary>
     public partial class MainWindow : Window
     {
-        public DbConnection connection = new DbConnection();
-        public MainWindow Init;
-        public MainWindow(MainWindow init)
+        public static DbConnection connection = new DbConnection();
+        public static MainWindow Init;
+        public MainWindow()
         {
             InitializeComponent();
-            this.Init = init;
+            Init = this;
 
+            Init.frame.Navigate(new Pages.PosterPg());
         }
     }
 }

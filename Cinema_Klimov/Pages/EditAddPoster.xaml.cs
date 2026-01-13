@@ -27,7 +27,7 @@ namespace Cinema_Klimov.Pages
 
         private void ToPoster(object sender, RoutedEventArgs e)
         {
-
+            MainWindow.Init.frame.Navigate(new Pages.PosterPg());
         }
 
         private void AddPoster(object sender, RoutedEventArgs e)

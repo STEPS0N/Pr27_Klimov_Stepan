@@ -27,7 +27,7 @@ namespace Cinema_Klimov.Pages
 
         private void ToCinema(object sender, RoutedEventArgs e)
         {
-
+            MainWindow.Init.frame.Navigate(new Pages.CinemaPg());
         }
 
         private void AddCinema(object sender, RoutedEventArgs e)

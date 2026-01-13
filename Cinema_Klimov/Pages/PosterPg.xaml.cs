@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinema_Klimov.Elements;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,16 +24,30 @@ namespace Cinema_Klimov.Pages
         public PosterPg()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        public void LoadData()
+        {
+            parentPoster.Children.Clear();
+
+            var poster = MainWindow.connection.Posters.ToList();
+
+            foreach (var p in poster)
+            {
+                var itemPoster = new CinemaEl();
+                parentPoster.Children.Add(itemPoster);
+            }
         }
 
         private void ToCinemas(object sender, RoutedEventArgs e)
         {
-
+            MainWindow.Init.frame.Navigate(new Pages.CinemaPg());
         }
 
         private void AddPoster(object sender, RoutedEventArgs e)
         {
-
+            MainWindow.Init.frame.Navigate(new Pages.EditAddPoster());
         }
     }
 }
