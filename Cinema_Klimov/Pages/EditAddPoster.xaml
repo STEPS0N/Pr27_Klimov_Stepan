@@ -17,7 +17,7 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="7" Orientation="Horizontal">
                     <Image Source="/Images/post.png"  Height="38" Width="50"/>
-                    <Label Content="Добавление афиши" VerticalAlignment="Center" FontSize="20" Foreground="White" FontWeight="Bold"/>
+                    <Label x:Name="lb" Content="Добавление афиши" VerticalAlignment="Center" FontSize="20" Foreground="White" FontWeight="Bold"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="7" Orientation="Horizontal">
                     <Button Click="ToPoster" Content="Вернуться" FontSize="20" Width="130" Background="#d8f3dc" Foreground="#081c15" FontWeight="Bold" Height="35"/>
@@ -35,7 +35,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10">
-                    <Button Click="AddPoster" Content="Добавить" FontSize="15" Width="175" Background="#2d6a4f" Foreground="White" FontWeight="Bold" Height="29"/>
+                    <Button x:Name="btn" Click="AddPoster" Content="Добавить" FontSize="15" Width="175" Background="#2d6a4f" Foreground="White" FontWeight="Bold" Height="29"/>
                 </StackPanel>
                 <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="10,0,10,10">
                     <Label Content="Название фильма:" FontSize="15"/>

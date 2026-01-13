@@ -26,6 +26,15 @@ namespace Cinema_Klimov.Pages
         {
             InitializeComponent();
             this.Cinema = cinema;
+
+            if (this.Cinema != null)
+            {
+                btn.Content = "Изменить";
+                lb.Content = "Изменение кинотеатра";
+                tbTitleCinema.Text = this.Cinema.Title;
+                tbHallsCinema.Text = this.Cinema.Halls.ToString();
+                tbPlacesCinema.Text = this.Cinema.Places.ToString();
+            }
         }
 
         private void ToCinema(object sender, RoutedEventArgs e)
@@ -35,7 +44,35 @@ namespace Cinema_Klimov.Pages
 
         private void AddCinema(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(tbTitleCinema.Text))
+            {
+                MessageBox.Show("Введите название кинотеатра!");
+            }
+            else if (string.IsNullOrEmpty(tbHallsCinema.Text))
+            {
+                MessageBox.Show("Введите кол-во залов!");
+            }
+            else if (string.IsNullOrEmpty(tbPlacesCinema.Text))
+            {
+                MessageBox.Show("Введите кол-во мест в зале!");
+            }
+            else
+            {
+                if (this.Cinema == null)
+                {
+                    this.Cinema = new Cinema();
+                    MainWindow.connection.Cinemas.Add(this.Cinema);
+                }
 
+                this.Cinema.Title = tbTitleCinema.Text;
+                this.Cinema.Halls = Convert.ToInt32(tbHallsCinema.Text);
+                this.Cinema.Places = Convert.ToInt32(tbPlacesCinema.Text);
+
+                MessageBox.Show("Сохранено!");
+                MainWindow.connection.SaveChanges();
+
+                ToCinema(null, null);
+            }
         }
     }
 }

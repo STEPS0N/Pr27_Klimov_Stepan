@@ -35,7 +35,7 @@ namespace Cinema_Klimov.Pages
 
             foreach (var p in poster)
             {
-                var itemPoster = new CinemaEl();
+                var itemPoster = new PosterEl(p, this);
                 parentPoster.Children.Add(itemPoster);
             }
         }

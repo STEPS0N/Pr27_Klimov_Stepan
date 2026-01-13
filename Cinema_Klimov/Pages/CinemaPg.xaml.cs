@@ -36,7 +36,7 @@ namespace Cinema_Klimov.Pages
 
             foreach (var c in cinema)
             {
-                var itemCinema = new CinemaEl();
+                var itemCinema = new CinemaEl(c, this);
                 parentCinema.Children.Add(itemCinema);
             }
         }

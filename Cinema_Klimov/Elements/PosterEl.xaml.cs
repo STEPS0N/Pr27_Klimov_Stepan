@@ -28,10 +28,13 @@ namespace Cinema_Klimov.Elements
         public PosterEl(Poster poster, PosterPg posterPg)
         {
             InitializeComponent();
+            this.Poster = poster;
+            this.PosterPg = posterPg;
 
             titlePoster.Content = poster.Film;
-            timePoster.Content = $"Начало сеанса: {poster.Time.ToString("dd.MM.yyyy")} в {poster.Time.Hour.ToString()}ч. {poster.Time.Minute.ToString()} мин.";
+            timePoster.Content = $"Начало сеанса: {poster.Time.ToString("dd.MM.yyyy")} в {poster.Time.Hour.ToString()} ч. {poster.Time.Minute.ToString()} мин.";
             pricePoster.Content = $"Стоимость билета: {poster.Price} руб.";
+            cinemaPoster.Content = $"({MainWindow.connection.Cinemas.ToList().Where(x => x.Id == poster.IdCinema).First().Title})";
         }
 
         private void EditPoster(object sender, RoutedEventArgs e)
