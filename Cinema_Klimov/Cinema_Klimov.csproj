@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\cinemaEl.png" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\post.png" />
   </ItemGroup>
@@ -23,10 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Elements\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Resource Include="Images\cinemaEl.png" />
     <Resource Include="Images\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
