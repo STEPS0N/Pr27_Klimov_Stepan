@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinema_Klimov.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace Cinema_Klimov.Pages
     /// </summary>
     public partial class EditAddPoster : Page
     {
-        public EditAddPoster()
+        public Poster Poster = null;
+        public EditAddPoster(Poster poster = null)
         {
             InitializeComponent();
+            this.Poster = poster;
         }
 
         private void ToPoster(object sender, RoutedEventArgs e)

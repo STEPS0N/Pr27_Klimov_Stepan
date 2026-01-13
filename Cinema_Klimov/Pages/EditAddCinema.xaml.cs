@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinema_Klimov.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace Cinema_Klimov.Pages
     /// </summary>
     public partial class EditAddCinema : Page
     {
-        public EditAddCinema()
+        public Cinema Cinema = null;
+        public EditAddCinema(Cinema cinema = null)
         {
             InitializeComponent();
+            this.Cinema = cinema;
         }
 
         private void ToCinema(object sender, RoutedEventArgs e)
